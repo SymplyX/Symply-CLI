@@ -1,0 +1,47 @@
+{
+  "name": "symplycli",
+  "version": "0.0.1",
+  "description": "automatic installation of Symply",
+  "main": "symplycli.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SymplyX/Symply-CLI.git"
+  },
+  "author": "AzaleeX",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/SymplyX/Symply-CLI/issues"
+  },
+  "bin": {
+    "symply": "symplycli.js"
+  },
+  "pkg": {
+    "targets": [
+      "node16"
+    ],
+    "assets": [
+      "node_modules/figlet/fonts/Standard.flf",
+      "lang/*",
+      "assets/*",
+      "tools/*"
+    ],
+    "outputPath": "target"
+  },
+  "homepage": "https://github.com/SymplyX/Symply-CLI#readme",
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "axios": "^1.6.1",
+    "figlet": "^1.7.0",
+    "gradient-string": "^2.0.2",
+    "i18n": "^0.15.1",
+    "octokit": "^3.1.1",
+    "picocolors": "^1.0.0",
+    "rcedit": "^4.0.1"
+  },
+  "scripts": {
+    "build": "npm run post-build && npm run build-exe",
+    "build-exe": "pkg .",
+    "post-build": "tools\\rcedit-x64 target\\symplycli.exe --set-icon assets\\symply.ico",
+    "preinstall": "rcedit -v"
+  }
+}

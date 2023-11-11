@@ -1,0 +1,11 @@
+{
+	"build-version" : "Would you like to use a development version ? (beta or pre-release)",
+	"good_file" : "Is the Symply installation done in the file where you launched the executable correct ?",
+	"new_path": "Enter the path of the Symply installation",
+	"invalid_path": "Invalid path",
+	"undefined_path": "Undefined path",
+	"latest_version": "Would you like the latest version ?",
+	"yes" : "Yes",
+	"no" : "No",
+	"no_sure_go_change" : "No, I want to change"
+}
